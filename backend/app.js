@@ -75,9 +75,9 @@ const db = mongoose.connection;
 db.on("error", console.error.bind(console, "MongoDB connecion error: "));
 
 // Initialize Passport
-
-app.use("/uploads", express.static("uploads"));
-app.use("/thumbs", express.static("thumbs"));
+// Hopefully not required as images are going to imagecloud
+// app.use("/uploads", express.static("uploads"));
+// app.use("/thumbs", express.static("thumbs"));
 
 // Enable CORS for all routes
 // app.use(cors());

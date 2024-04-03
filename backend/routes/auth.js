@@ -15,6 +15,8 @@ router.get("/google_signin/error", authController.googleSigninError);
 //   res.status(201).json({ user: userProfile });
 // });
 
+// Not implemented in final site as it is so complicated for test project
+
 router.get("/facebook_signin", authController.signinFacebook);
 router.get("/facebook_signin/callback", authController.facebookSigninCallback);
 router.get("/facebook_signin/error", authController.facebookSigninError);
