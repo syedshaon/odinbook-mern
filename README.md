@@ -1,4 +1,4 @@
-### Done for the fulfillment of the Odin Project Full Stack JavaScript Course
+### Back-End focused MERN app, done for the fulfillment of the Odin Project Full Stack JavaScript Course
 
 - https://www.theodinproject.com/lessons/nodejs-messaging-app
 - https://www.theodinproject.com/lessons/nodejs-odin-book
@@ -13,8 +13,7 @@
 - MongoDB
 - Node
 - Passport JWT, Google Oauth
-- Imagekit.io to store messenger and post images
-- Multer to store profile picture and conver images
+- Imagekit.io to store images
 - socket.io for instant messaging
 - faker-js for seeding database
 
