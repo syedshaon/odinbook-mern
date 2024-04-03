@@ -1,0 +1,208 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+const fs = require("fs");
+var app = require("../app");
+var debug = require("debug")("blog-api:server");
+var http = require("http");
+const socketIO = require("socket.io");
+const messengerController = require("../controllers/messengerController");
+const { verifyToken } = require("../controllers/middleWare/verifyToken");
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+var port = normalizePort(process.env.PORT || "3000");
+app.set("port", port);
+
+/**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app);
+server.maxHeadersCount = 0; // Set the desired max header size
+
+const allowedOrigins = [process.env.FRONT1, process.env.FRONT2];
+
+const corsOptions = {
+  origin: function (origin, callback) {
+    // Check if the origin is in the allowed list or if it's not defined (e.g., a same-origin request)
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true,
+};
+
+// Set up CORS options
+// const corsOptions = {
+//   origin: process.env.FRONT1, // Adjust the allowed origin as needed
+//   methods: ["GET", "POST"],
+//   credentials: true,
+//   optionsSuccessStatus: 204,
+// };
+
+const io = socketIO(server, {
+  cors: corsOptions, // Use the same CORS options for Socket.IO
+});
+
+const socketToUserMap = {};
+// Function to get socketId for a given userId
+function getUserIdSocketId(userId) {
+  return socketToUserMap[userId];
+}
+// Socket.IO logic
+io.on("connection", async (socket) => {
+  const getSenderProfileId = async (token) => {
+    try {
+      const senderProfile = await verifyToken(token);
+      return senderProfile ? senderProfile._id : null;
+    } catch (error) {
+      console.error("Error verifying token:", error);
+      return null;
+    }
+  };
+
+  // Usage:
+  const sender = await getSenderProfileId(socket.handshake.query.token);
+
+  // Perform authentication and call next() if successful
+  if (!sender) {
+    return new Error("Authentication failed");
+  }
+
+  // Otherwise, disconnect the socket
+
+  // const senderProfile = await verifyToken(socket.handshake.query.token)=>((profile)=>profile._id);
+  // const sender = senderProfile._id;
+  // console.log(sender);
+  // const sender = socket.handshake.query.sender;
+  socketToUserMap[sender._id] = socket.id;
+
+  let userIdsArray = Object.keys(socketToUserMap);
+  io.emit("activeUsers", { userIdsArray });
+
+  socket.on("sendMessage", async (message) => {
+    const socketId = socketToUserMap[sender];
+    const conversation = await messengerController.createMessage(sender, message.text, message.recievers, false, message.conId);
+    const recievers = [...message.recievers, sender];
+    recievers.forEach((recipient) => {
+      io.to(getUserIdSocketId(recipient)).emit("receiveMessage", { conversation });
+    });
+  });
+
+  socket.on("groupMessage", async (message) => {
+    const socketId = socketToUserMap[sender];
+    const conversation = await messengerController.createMessage(sender, message.text, message.recievers, true, message.conId);
+    const recievers = [...message.recievers, sender];
+    recievers.forEach((recipient) => {
+      io.to(getUserIdSocketId(recipient)).emit("receiveGroupMessage", { conversation });
+    });
+  });
+
+  socket.on("image", async (message) => {
+    // Save the image to a file or process it as needed
+    // const base64Data = message.text.file.buffer.toString("base64");
+    // const base64Data = message.text.replace(/^data:image\/png;base64,/, ""); //
+    // fs.writeFileSync("image.png", base64Data, "base64");
+
+    const conversation = await messengerController.createMessage(sender, message.text, message.recievers, false, message.conId, "image");
+    const recievers = [...message.recievers, sender];
+    recievers.forEach((recipient) => {
+      io.to(getUserIdSocketId(recipient)).emit("receiveMessage", { conversation });
+    });
+
+    console.log("Image received");
+  });
+
+  socket.on("groupImage", async (message) => {
+    // Save the image to a file or process it as needed
+    // const base64Data = message.text.file.buffer.toString("base64");
+    // const base64Data = message.text.replace(/^data:image\/png;base64,/, ""); //
+    // fs.writeFileSync("image.png", base64Data, "base64");
+
+    const conversation = await messengerController.createMessage(sender, message.text, message.recievers, true, message.conId, "image");
+    const recievers = [...message.recievers, sender];
+    recievers.forEach((recipient) => {
+      io.to(getUserIdSocketId(recipient)).emit("receiveGroupMessage", { conversation });
+    });
+
+    console.log("Image received");
+  });
+
+  // Handle disconnection
+  socket.on("disconnect", () => {
+    delete socketToUserMap[socket.id];
+    let userIdsArray = Object.keys(socketToUserMap);
+    io.emit("activeUsers", { userIdsArray });
+  });
+});
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+server.listen(port);
+server.on("error", onError);
+server.on("listening", onListening);
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+
+/**
+ * Event listener for HTTP server "error" event.
+ */
+
+function onError(error) {
+  if (error.syscall !== "listen") {
+    throw error;
+  }
+
+  var bind = typeof port === "string" ? "Pipe " + port : "Port " + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case "EACCES":
+      console.error(bind + " requires elevated privileges");
+      process.exit(1);
+      break;
+    case "EADDRINUSE":
+      console.error(bind + " is already in use");
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
+  debug("Listening on " + bind);
+}

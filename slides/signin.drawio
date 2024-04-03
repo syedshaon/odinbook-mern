@@ -1,0 +1,204 @@
+<mxfile host="app.diagrams.net" modified="2024-02-17T18:41:34.984Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="IyyeGasIfKjF-XUiCALo" version="23.1.5" type="device">
+  <diagram name="Page-1" id="V96OR2ep9DXPKzGtc8qw">
+    <mxGraphModel dx="1648" dy="992" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="uz5QgHpY2Cw1FlYYKC5Z-1" value="&lt;font style=&quot;font-size: 24px;&quot;&gt;Signin&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=none;fontColor=#2563EB;strokeColor=#2563EB;" parent="1" vertex="1">
+          <mxGeometry x="10" y="356" width="120" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="uz5QgHpY2Cw1FlYYKC5Z-27" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#2563EB;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#2563EB;" parent="1" source="uz5QgHpY2Cw1FlYYKC5Z-1" target="uz5QgHpY2Cw1FlYYKC5Z-2" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="80" y="272" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-73" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#0000FF;" edge="1" parent="1" target="DpVx8PbNrAjOCEbFa7wI-71">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="180" y="240" as="sourcePoint" />
+            <mxPoint x="190" y="130" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="180" y="131" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uz5QgHpY2Cw1FlYYKC5Z-2" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Continue with Google&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#2563EB;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#2563EB;" parent="1" vertex="1">
+          <mxGeometry x="130" y="243" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uz5QgHpY2Cw1FlYYKC5Z-30" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#2563EB;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#2563EB;" parent="1" source="uz5QgHpY2Cw1FlYYKC5Z-1" target="uz5QgHpY2Cw1FlYYKC5Z-3" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#2563EB;" edge="1" parent="1" source="uz5QgHpY2Cw1FlYYKC5Z-3" target="DpVx8PbNrAjOCEbFa7wI-25">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uz5QgHpY2Cw1FlYYKC5Z-3" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;With email &amp;amp; Password&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#2563EB;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#2563EB;" parent="1" vertex="1">
+          <mxGeometry x="10" y="480" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-8" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#CCCC00;" edge="1" parent="1" source="DpVx8PbNrAjOCEbFa7wI-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="595" y="51" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uz5QgHpY2Cw1FlYYKC5Z-12" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;An User profile with username, firstname, lastname, isActive = true is created&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#2563EB;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#CCCC00;" parent="1" vertex="1">
+          <mxGeometry x="595" width="210" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="uz5QgHpY2Cw1FlYYKC5Z-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontColor=#2563EB;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#CCCC00;" parent="1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="700" y="120" as="sourcePoint" />
+            <mxPoint x="700" y="203" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#009900;" edge="1" parent="1" source="DpVx8PbNrAjOCEbFa7wI-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="610" y="263" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uz5QgHpY2Cw1FlYYKC5Z-14" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;User is sent to front-end with Secret JWT token as &quot;auth_cookie&quot; cookie&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#2563EB;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#009900;" parent="1" vertex="1">
+          <mxGeometry x="610" y="202" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="790" y="263" as="sourcePoint" />
+            <mxPoint x="825" y="263" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="uz5QgHpY2Cw1FlYYKC5Z-17" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Front-end retrives jwt token which will be used for any future request. Also gets Refresh token.&lt;br&gt;JWT token saved in Redux state. User remains Logged In.&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#2563EB;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#009900;" parent="1" vertex="1">
+          <mxGeometry x="825" y="202" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#009900;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="DpVx8PbNrAjOCEbFa7wI-71" target="DpVx8PbNrAjOCEbFa7wI-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="345" y="191" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="350" y="263" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-3" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Yes&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#009900;" vertex="1" parent="1">
+          <mxGeometry x="465" y="243" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-10" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;strokeColor=#CCCC00;" edge="1" parent="1" source="DpVx8PbNrAjOCEbFa7wI-71" target="DpVx8PbNrAjOCEbFa7wI-4">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="345" y="119" as="sourcePoint" />
+            <Array as="points">
+              <mxPoint x="350" y="51" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-4" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;No&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#CCCC00;" vertex="1" parent="1">
+          <mxGeometry x="465" y="31" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=-0.008;entryY=0.578;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=#FF3333;" edge="1" parent="1" source="DpVx8PbNrAjOCEbFa7wI-19" target="DpVx8PbNrAjOCEbFa7wI-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="360" y="780" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-19" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Email &amp;amp; PW matches&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#2563EB;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#FF3333;" vertex="1" parent="1">
+          <mxGeometry x="485" y="750" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-20" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Front-end receives jwt token which will be used for any future request. Also gets Refresh token.&lt;br&gt;JWT token saved in Redux state. User remains Logged In.&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#2563EB;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#FF3333;" vertex="1" parent="1">
+          <mxGeometry x="820" y="710" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#CC6600;" edge="1" parent="1" source="DpVx8PbNrAjOCEbFa7wI-25" target="DpVx8PbNrAjOCEbFa7wI-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-25" value="Check if user is Active?" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#2563EB;fontColor=#2563EB;rounded=1;labelBackgroundColor=none;labelBorderColor=none;" vertex="1" parent="1">
+          <mxGeometry x="160" y="455" width="120" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#CC6600;" edge="1" parent="1" source="DpVx8PbNrAjOCEbFa7wI-27" target="DpVx8PbNrAjOCEbFa7wI-45">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="278" y="625" />
+              <mxPoint x="278" y="655" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-27" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Yes&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#CC6600;" vertex="1" parent="1">
+          <mxGeometry x="185" y="605" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#00CC00;" edge="1" parent="1" source="DpVx8PbNrAjOCEbFa7wI-25" target="DpVx8PbNrAjOCEbFa7wI-30">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-30" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;No&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#00CC00;" vertex="1" parent="1">
+          <mxGeometry x="320" y="490" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#00CC00;" edge="1" parent="1" source="DpVx8PbNrAjOCEbFa7wI-30" target="DpVx8PbNrAjOCEbFa7wI-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;strokeColor=#00CC00;" edge="1" parent="1" source="DpVx8PbNrAjOCEbFa7wI-34" target="DpVx8PbNrAjOCEbFa7wI-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="715" y="465" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-34" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;User gets button to receive Activation email again&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#2563EB;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#00CC00;" vertex="1" parent="1">
+          <mxGeometry x="480" y="425" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;strokeColor=#00CC00;" edge="1" parent="1" source="DpVx8PbNrAjOCEbFa7wI-36">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1015" y="420" as="sourcePoint" />
+            <mxPoint x="130" y="390" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="830" y="425" />
+              <mxPoint x="830" y="390" />
+              <mxPoint x="130" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-36" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;User&#39;s Activates his account and sent to Signin page.&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#2563EB;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#00CC00;" vertex="1" parent="1">
+          <mxGeometry x="770" y="425" width="130" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;strokeColor=#FF3333;" edge="1" parent="1" source="DpVx8PbNrAjOCEbFa7wI-45" target="DpVx8PbNrAjOCEbFa7wI-49">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="362.5" y="750" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-57" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#009999;" edge="1" parent="1" source="DpVx8PbNrAjOCEbFa7wI-45" target="DpVx8PbNrAjOCEbFa7wI-55">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-45" value="Check if Email &amp;amp; PW matches" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#CC6600;fontColor=#2563EB;rounded=1;labelBackgroundColor=none;labelBorderColor=none;" vertex="1" parent="1">
+          <mxGeometry x="300" y="590" width="155" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;strokeColor=#FF3333;" edge="1" parent="1" source="DpVx8PbNrAjOCEbFa7wI-49" target="DpVx8PbNrAjOCEbFa7wI-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-49" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Yes&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#FF3333;" vertex="1" parent="1">
+          <mxGeometry x="342.5" y="760" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-64" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.564;entryY=1.056;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;strokeColor=#009999;" edge="1" parent="1" source="DpVx8PbNrAjOCEbFa7wI-55" target="DpVx8PbNrAjOCEbFa7wI-56">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="625" y="655" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-55" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;No&lt;/font&gt;" style="ellipse;whiteSpace=wrap;html=1;strokeColor=#009999;" vertex="1" parent="1">
+          <mxGeometry x="500" y="635" width="70" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-60" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DpVx8PbNrAjOCEbFa7wI-56" target="DpVx8PbNrAjOCEbFa7wI-59">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-56" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;User gets button to reset PW&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#2563EB;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#009999;" vertex="1" parent="1">
+          <mxGeometry x="550" y="550" width="130" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-62" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="DpVx8PbNrAjOCEbFa7wI-59" target="DpVx8PbNrAjOCEbFa7wI-61">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-59" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;User insert his email and receives link to reset PW&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#2563EB;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#009999;" vertex="1" parent="1">
+          <mxGeometry x="720" y="540" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-66" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.25;entryDx=0;entryDy=0;strokeColor=#009999;" edge="1" parent="1" source="DpVx8PbNrAjOCEbFa7wI-61" target="uz5QgHpY2Cw1FlYYKC5Z-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="950" y="350" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1005" y="369" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-61" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;After clicking on the link user set a new password&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;fontColor=#2563EB;labelBackgroundColor=none;labelBorderColor=none;strokeColor=#009999;" vertex="1" parent="1">
+          <mxGeometry x="930" y="540" width="150" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="DpVx8PbNrAjOCEbFa7wI-71" value="Check if user&lt;br&gt;&amp;nbsp;profile with user&#39;s&lt;br&gt;email exists?" style="rhombus;whiteSpace=wrap;html=1;strokeColor=#0000FF;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="270" y="71" width="160" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

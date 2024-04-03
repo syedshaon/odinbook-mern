@@ -1,0 +1,43 @@
+<mxfile host="app.diagrams.net" modified="2024-02-17T15:59:21.142Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/121.0.0.0 Safari/537.36" etag="p05sj3ThxdxkrDFPBzx1" version="23.1.5" type="device">
+  <diagram name="Page-1" id="V96OR2ep9DXPKzGtc8qw">
+    <mxGraphModel dx="1648" dy="992" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="850" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="uz5QgHpY2Cw1FlYYKC5Z-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uz5QgHpY2Cw1FlYYKC5Z-1" target="uz5QgHpY2Cw1FlYYKC5Z-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uz5QgHpY2Cw1FlYYKC5Z-1" value="&lt;font style=&quot;font-size: 18px;&quot;&gt;Signup&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry y="200" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uz5QgHpY2Cw1FlYYKC5Z-11" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uz5QgHpY2Cw1FlYYKC5Z-1" target="uz5QgHpY2Cw1FlYYKC5Z-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uz5QgHpY2Cw1FlYYKC5Z-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uz5QgHpY2Cw1FlYYKC5Z-2" target="uz5QgHpY2Cw1FlYYKC5Z-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uz5QgHpY2Cw1FlYYKC5Z-2" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Signup with Google&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="140" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uz5QgHpY2Cw1FlYYKC5Z-3" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;Signup providing Details&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="160" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="uz5QgHpY2Cw1FlYYKC5Z-12" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;An User profile with username, firstname, lastname, isActive = true is created&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="360" y="80" width="210" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="uz5QgHpY2Cw1FlYYKC5Z-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uz5QgHpY2Cw1FlYYKC5Z-12" target="uz5QgHpY2Cw1FlYYKC5Z-14">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uz5QgHpY2Cw1FlYYKC5Z-18" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="uz5QgHpY2Cw1FlYYKC5Z-14" target="uz5QgHpY2Cw1FlYYKC5Z-17">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="uz5QgHpY2Cw1FlYYKC5Z-14" value="&lt;font style=&quot;font-size: 14px;&quot;&gt;User is sent to front-end with Secret JWT token as &quot;auth_cookie&quot; cookie&lt;/font&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="620" y="80" width="180" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="uz5QgHpY2Cw1FlYYKC5Z-17" value="&lt;span style=&quot;font-size: 14px;&quot;&gt;Front-end retrives jwt token which will be used for any future request. Also gets Refresh token.&lt;br&gt;JWT token saved in Redux state. User remains Logged In.&lt;br&gt;&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="840" y="80" width="260" height="120" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

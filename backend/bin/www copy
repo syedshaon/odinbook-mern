@@ -1,0 +1,205 @@
+#!/usr/bin/env node
+
+/**
+ * Module dependencies.
+ */
+
+var app = require("../app");
+var debug = require("debug")("blog-api:server");
+var http = require("http");
+const socketIO = require("socket.io");
+const messengerController = require("../controllers/messengerController");
+
+/**
+ * Get port from environment and store in Express.
+ */
+
+var port = normalizePort(process.env.PORT || "3000");
+app.set("port", port);
+
+/**
+ * Create HTTP server.
+ */
+
+var server = http.createServer(app);
+
+// Set up CORS options
+const corsOptions = {
+  origin: process.env.FRONT1, // Adjust the allowed origin as needed
+  methods: ["GET", "POST"],
+  credentials: true,
+  optionsSuccessStatus: 204,
+};
+
+const io = socketIO(server, {
+  cors: corsOptions, // Use the same CORS options for Socket.IO
+});
+
+const socketToUserMap = {};
+// Function to get socketId for a given userId
+function getUserIdSocketId(userId) {
+  return socketToUserMap[userId];
+}
+// Socket.IO logic
+io.on("connection", async (socket) => {
+  const sender = socket.handshake.query.sender;
+
+  // const sender = socket.handshake.query.id;
+
+  // socket.join(sender);
+  // socket.join(id);
+  socketToUserMap[sender] = socket.id;
+
+  // console.log("User connected:", sender);
+
+  // const recipients = ["65b67d09db0fb3802374e2f5", "65b519d8e4f9c93ba546f5d7"];
+
+  // Handle incoming messages
+  socket.on("sendMessage", async (message) => {
+    // Access userId using the mapping
+
+    // const recievers = socket.handshake.query.recievers;
+    // console.log(message);
+
+    const socketId = socketToUserMap[sender];
+
+    // console.log("socketToUserMap:", socketToUserMap);
+    // console.log("getUserIdSocketId:", getUserIdSocketId(sender));
+    // console.log("socketId:", socketId);
+    // console.log("socket.id:", socket.id);
+    // Broadcast the message to all connected clients
+    // io.emit("receiveMessage", message);
+
+    const conversation = await messengerController.createMessage(sender, message.text, message.recievers, false);
+
+    // console.log(newMsg);
+
+    // const newMsg = { text: message.text, sender: sender, recievers: message.recievers };
+    const recievers = [...message.recievers, sender];
+
+    // console.log(recievers);
+
+    // io.to(getUserIdSocketId(recievers)).emit("receiveMessage", { newMsg });
+
+    recievers.forEach((recipient) => {
+      io.to(getUserIdSocketId(recipient)).emit("receiveMessage", { conversation });
+    });
+
+    // If userId is available, emit the message to that specific user
+    // if (socketId) {
+    //   io.to(socketId).emit("receiveMessage", { text: message.text, sender: sender, recievers: message.recievers });
+    // }
+  });
+
+  socket.on("groupMessage", async (message) => {
+    // Access userId using the mapping
+
+    // const recievers = socket.handshake.query.recievers;
+    // console.log(message);
+
+    const socketId = socketToUserMap[sender];
+
+    // console.log("socketToUserMap:", socketToUserMap);
+    // console.log("getUserIdSocketId:", getUserIdSocketId(sender));
+    // console.log("socketId:", socketId);
+    // console.log("socket.id:", socket.id);
+    // Broadcast the message to all connected clients
+    // io.emit("receiveMessage", message);
+
+    const conversation = await messengerController.createMessage(sender, message.text, message.recievers, true);
+
+    // console.log(newMsg);
+
+    // const newMsg = { text: message.text, sender: sender, recievers: message.recievers };
+    const recievers = [...message.recievers, sender];
+
+    // console.log(recievers);
+
+    // io.to(getUserIdSocketId(recievers)).emit("receiveMessage", { newMsg });
+
+    recievers.forEach((recipient) => {
+      io.to(getUserIdSocketId(recipient)).emit("receiveGroupMessage", { conversation });
+    });
+
+    // If userId is available, emit the message to that specific user
+    // if (socketId) {
+    //   io.to(socketId).emit("receiveMessage", { text: message.text, sender: sender, recievers: message.recievers });
+    // }
+  });
+
+  // Emit Messages to Specific Users
+
+  const targetSocketId = getUserIdSocketId(sender);
+  io.to(targetSocketId).emit("privateMessage", { text: "Hello, private message!" });
+
+  // Handle disconnection
+  socket.on("disconnect", () => {
+    // console.log("User disconnected:", socket.id);
+    // Remove the mapping when a user disconnects
+    delete socketToUserMap[socket.id];
+  });
+});
+
+/**
+ * Listen on provided port, on all network interfaces.
+ */
+
+server.listen(port);
+server.on("error", onError);
+server.on("listening", onListening);
+
+/**
+ * Normalize a port into a number, string, or false.
+ */
+
+function normalizePort(val) {
+  var port = parseInt(val, 10);
+
+  if (isNaN(port)) {
+    // named pipe
+    return val;
+  }
+
+  if (port >= 0) {
+    // port number
+    return port;
+  }
+
+  return false;
+}
+
+/**
+ * Event listener for HTTP server "error" event.
+ */
+
+function onError(error) {
+  if (error.syscall !== "listen") {
+    throw error;
+  }
+
+  var bind = typeof port === "string" ? "Pipe " + port : "Port " + port;
+
+  // handle specific listen errors with friendly messages
+  switch (error.code) {
+    case "EACCES":
+      console.error(bind + " requires elevated privileges");
+      process.exit(1);
+      break;
+    case "EADDRINUSE":
+      console.error(bind + " is already in use");
+      process.exit(1);
+      break;
+    default:
+      throw error;
+  }
+}
+
+/**
+ * Event listener for HTTP server "listening" event.
+ */
+
+function onListening() {
+  var addr = server.address();
+  var bind = typeof addr === "string" ? "pipe " + addr : "port " + addr.port;
+  debug("Listening on " + bind);
+}

@@ -1,0 +1,52 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap") /* Import CSS reset */ @import "normalize.css";
+
+/* Import Tailwind CSS */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #f2f4f7;
+}
+
+.main-nav a.active {
+  border-color: rgb(59, 130, 246);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+.fade-out {
+  animation: fadeOut 0.5s ease-in-out;
+}
+
+.msgArea {
+  height: calc(100vh - 130px);
+}
+
+@media (min-width: 768px) {
+  .msgArea {
+    height: calc(100vh - 84px);
+  }
+}
